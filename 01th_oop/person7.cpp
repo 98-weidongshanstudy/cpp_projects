@@ -3,6 +3,8 @@
 
 //person 成员变量中，gg gg1 的空间大小都是1，地址随在age后面
 //gg2的空间大小是1，地址跟在work后面
+
+#pragma pack(push,2)
 class person {
 public:
 	char *name;
@@ -18,6 +20,7 @@ public:
 		printf("name = %s, age = %d, work = %s\n", name, age, work); 
 	}
 };
+#pragma pack(pop)
 
 bool memey_mode(void)
 {
@@ -34,7 +37,6 @@ int main(int argc, char **argv)
 	
 	persons[0].printInfo();
 	persons[1].printInfo();
-
 
 	printf("sizeof *char = %d\n",sizeof(persons[0].name));
 	printf("sizeof int = %d\n",sizeof(persons[0].age));

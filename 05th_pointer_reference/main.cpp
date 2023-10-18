@@ -39,6 +39,9 @@ int main(int argc, char **argv)
 	cout<<"a = "<<a<<endl;
 	cout<<"c = "<<c<<endl;
 
+	cout<<"*a = "<<&a<<endl;
+	cout<<"*c = "<<&c<<endl;
+
 	return 0;
 }
 
