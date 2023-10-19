@@ -4,6 +4,8 @@
     "files.associations": {
         "*.m": "matlab",
         "*.tcc": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "condition_variable": "cpp",
+        "iostream": "cpp"
     }
 }
