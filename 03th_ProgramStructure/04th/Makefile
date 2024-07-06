@@ -1,9 +1,10 @@
+CFLAGS = -g -Wall
 
-person: main.o person.o dog.o
-	g++ -o $@ $^
+main: main.o person.o dog.o
+	g++ ${CFLAGS} -o $@ $^
 
 %.o : %.cpp
-	g++ -c -o $@ $<
+	g++ ${CFLAGS} -c -o $@ $<
 
 clean:
-	rm -f *.o person	
+	del *.o *.exe
