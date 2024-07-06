@@ -7,13 +7,12 @@
 #pragma pack(push,2)
 class person {
 public:
-	char *name;
-	int age;
-	char gg;
-	char gg1;
-	char *work;
-	char gg2;
-	
+	char *name; // 1
+	int age;    // 4
+	char gg;	// 1
+	char gg1;	// 1
+	char *work; // 8
+	char gg2;	// 1
 
 	void printInfo(void)
 	{

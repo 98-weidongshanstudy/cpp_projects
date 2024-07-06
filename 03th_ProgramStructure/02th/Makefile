@@ -1,9 +1,12 @@
 
-person: main.o person.o
-	g++ -o $@ $^
+CFLAGS = -g -Wall
+
+main: main.o person.o
+	g++ $(CFLAGS) -o $@ $^
 
 %.o : %.cpp
-	g++ -c -o $@ $<
+	g++ $(CFLAGS) -c -o $@ $<
 
 clean:
-	rm -f *.o person	
+	del *.o *.exe
+	
