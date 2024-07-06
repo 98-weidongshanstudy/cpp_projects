@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 
 	printf("sizeof *char = %d\n",sizeof(persons[0].name));
 	printf("sizeof int = %d\n",sizeof(persons[0].age));
-	printf("sizeof char = %d\n",sizeof(persons[0].age));
+	printf("sizeof char = %d\n",sizeof(persons[0].gg));
 
 	int a = 2;
 	printf("sizeof int = %d\n",sizeof(a));

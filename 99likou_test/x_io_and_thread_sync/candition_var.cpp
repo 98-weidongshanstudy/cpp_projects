@@ -14,12 +14,13 @@ int i;
 
 void waits(int idx)
 {
-    std::unique_lock<std::mutex> lk(cv_m);
-    if (cv.wait_for(lk, idx*100ms, []{return i == 1;})) {
-        std::cerr << "Thread " << idx << " finished waiting. i == " << i << '\n';
-    } else {
-        std::cerr << "Thread " << idx << " timed out. i == " << i << '\n';
-    }
+  std::unique_lock<std::mutex> lk(cv_m);
+  if (cv.wait_for(lk, idx * 100ms, [] {return i == 1; })) 
+  {
+    std::cerr << "Thread " << idx << " finished waiting. i == " << i << '\n';
+  } else {
+    std::cerr << "Thread " << idx << " timed out. i == " << i << '\n';
+  }
 }
 
 void signals()
